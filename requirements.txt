@@ -1,0 +1,7 @@
+pandas
+jieba
+scikit-learn
+numpy
+sentence-transformers
+torch
+transformers
