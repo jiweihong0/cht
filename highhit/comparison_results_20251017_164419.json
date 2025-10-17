@@ -1,0 +1,377 @@
+{
+  "original_stats": {
+    "total": 168,
+    "correct": 86,
+    "overall_accuracy": 0.5119047619047619,
+    "original_accuracy": 1.0,
+    "variation_accuracy": 0.26785714285714285,
+    "original_count": 56,
+    "variation_count": 112,
+    "category_stats": {
+      "資料": {
+        "total": 27,
+        "correct": 13
+      },
+      "實體": {
+        "total": 57,
+        "correct": 32
+      },
+      "軟體": {
+        "total": 54,
+        "correct": 29
+      },
+      "人員": {
+        "total": 18,
+        "correct": 7
+      },
+      "服務": {
+        "total": 12,
+        "correct": 5
+      }
+    }
+  },
+  "optimized_stats": {
+    "total": 168,
+    "correct": 116,
+    "overall_accuracy": 0.6904761904761905,
+    "original_accuracy": 0.8214285714285714,
+    "variation_accuracy": 0.625,
+    "original_count": 56,
+    "variation_count": 112,
+    "category_stats": {
+      "資料": {
+        "total": 27,
+        "correct": 26
+      },
+      "實體": {
+        "total": 57,
+        "correct": 21
+      },
+      "軟體": {
+        "total": 54,
+        "correct": 45
+      },
+      "人員": {
+        "total": 18,
+        "correct": 15
+      },
+      "服務": {
+        "total": 12,
+        "correct": 9
+      }
+    }
+  },
+  "improvements": {
+    "overall": 0.1785714285714286,
+    "original": -0.1785714285714286,
+    "variation": 0.35714285714285715
+  },
+  "fixed_cases": [
+    {
+      "text": "作業文件",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "SOP",
+      "true_category": "資料",
+      "original_prediction": "軟體",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "電子紀錄",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "日誌",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "可攜式儲存媒體",
+      "true_category": "實體",
+      "original_prediction": "軟體",
+      "optimized_prediction": "實體"
+    },
+    {
+      "text": "資料庫管理系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "Oracle",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "開發語言",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": ".NET",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "外部人員",
+      "true_category": "人員",
+      "original_prediction": "資料",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "資料庫管理系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "內、外部服務",
+      "true_category": "服務",
+      "original_prediction": "實體",
+      "optimized_prediction": "服務"
+    },
+    {
+      "text": "合約",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "可攜式儲存媒體",
+      "true_category": "實體",
+      "original_prediction": "軟體",
+      "optimized_prediction": "實體"
+    },
+    {
+      "text": "電子紀錄",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "原始碼",
+      "true_category": "資料",
+      "original_prediction": "軟體",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "電子紀錄",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "備份檔案",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "合約",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "內部人員",
+      "true_category": "人員",
+      "original_prediction": "資料",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "內部人員",
+      "true_category": "人員",
+      "original_prediction": "資料",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "內、外部服務",
+      "true_category": "服務",
+      "original_prediction": "實體",
+      "optimized_prediction": "服務"
+    },
+    {
+      "text": "作業系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "Windows",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "應用系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "可攜式儲存媒體",
+      "true_category": "實體",
+      "original_prediction": "軟體",
+      "optimized_prediction": "實體"
+    },
+    {
+      "text": "內、外部服務",
+      "true_category": "服務",
+      "original_prediction": "實體",
+      "optimized_prediction": "服務"
+    },
+    {
+      "text": "內部人員",
+      "true_category": "人員",
+      "original_prediction": "資料",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "承辦人",
+      "true_category": "人員",
+      "original_prediction": "軟體",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "作業系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "Linux",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "可攜式儲存媒體",
+      "true_category": "實體",
+      "original_prediction": "軟體",
+      "optimized_prediction": "實體"
+    },
+    {
+      "text": "外部人員",
+      "true_category": "人員",
+      "original_prediction": "資料",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "委外廠商",
+      "true_category": "人員",
+      "original_prediction": "軟體",
+      "optimized_prediction": "人員"
+    },
+    {
+      "text": "作業文件",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "開發語言",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "Java",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "作業文件",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "應用系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "作業系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "應用系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "開發語言",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "ASP",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "內、外部服務",
+      "true_category": "服務",
+      "original_prediction": "實體",
+      "optimized_prediction": "服務"
+    },
+    {
+      "text": "開發語言",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "電子紀錄",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "組態檔",
+      "true_category": "資料",
+      "original_prediction": "人員",
+      "optimized_prediction": "資料"
+    },
+    {
+      "text": "機房監控",
+      "true_category": "實體",
+      "original_prediction": "軟體",
+      "optimized_prediction": "實體"
+    },
+    {
+      "text": "資料庫管理系統",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "MySQL",
+      "true_category": "軟體",
+      "original_prediction": "服務",
+      "optimized_prediction": "軟體"
+    },
+    {
+      "text": "外部人員",
+      "true_category": "人員",
+      "original_prediction": "資料",
+      "optimized_prediction": "人員"
+    }
+  ]
+}
