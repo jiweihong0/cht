@@ -15,8 +15,7 @@ from datetime import datetime
 from collections import defaultdict, Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-import jieba
-import jieba.posseg as pseg
+from ckip_transformers.nlp import CkipWordSegmenter
 
 class UltimateClassifier:
     """終極優化分類器"""
@@ -35,10 +34,19 @@ class UltimateClassifier:
         self.vectorizer = None
         self.category_vectors = {}
         
+        # 初始化 CKIP 分詞器
+        try:
+            self.ws = CkipWordSegmenter(model="bert-base")
+            print("✅ CKIP 分詞器初始化完成")
+        except Exception as e:
+            print(f"❌ CKIP 分詞器初始化失敗：{e}")
+            print("⚠️ 請安裝 ckip-transformers: pip install ckip-transformers")
+            raise
+        
         # 載入配置
         self.load_configs()
         
-        # 註冊保留詞
+        # 註冊保留詞 (CKIP 不需要手動註冊詞彙，但仍顯示訊息)
         self._register_reserved_words()
         
         # 初始化
@@ -74,9 +82,9 @@ class UltimateClassifier:
             self.category_rules = {}
     
     def _register_reserved_words(self):
-        """註冊保留詞到 jieba"""
-        for phrase in self.reserved_words.keys():
-            jieba.add_word(phrase, freq=10000)
+        """CKIP 分詞器不需要手動註冊保留詞"""
+        # CKIP 使用神經網路模型，不需要手動添加詞典
+        print(f"✅ 保留詞配置已載入：{len(self.reserved_words)} 個詞彙")
     
     def load_data(self):
         """載入資料"""
@@ -108,7 +116,13 @@ class UltimateClassifier:
         remaining_words = []
         clean_remaining = re.sub(r'\[RESERVED\]', '', remaining_text).strip()
         if clean_remaining:
-            remaining_words = [w for w in jieba.cut(clean_remaining) if len(w.strip()) > 1]
+            try:
+                # 使用 CKIP 分詞
+                segmented = self.ws([clean_remaining])
+                remaining_words = [w for w in segmented[0] if len(w.strip()) > 1]
+            except Exception as e:
+                print(f"⚠️ CKIP 分詞失敗，使用基本分割：{e}")
+                remaining_words = [w for w in clean_remaining.split() if len(w.strip()) > 1]
         
         # 展開保留詞
         expanded_tokens = []
@@ -187,13 +201,13 @@ class UltimateClassifier:
         """重新載入配置文件 - 用於運行時更新配置"""
         print("🔄 重新載入配置文件...")
         self.load_configs()
-        self._register_reserved_words()
+        # CKIP 不需要重新註冊保留詞
         print("✅ 配置更新完成")
     
     def add_reserved_word(self, word, tokens):
         """動態添加保留詞"""
         self.reserved_words[word] = tokens
-        jieba.add_word(word, freq=10000)
+        # CKIP 不需要手動添加詞典
         print(f"✅ 已添加保留詞：{word} → {tokens}")
     
     def save_configs(self):

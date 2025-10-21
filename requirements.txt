@@ -1,5 +1,5 @@
 pandas
-jieba
+ckip-transformers
 scikit-learn
 numpy
 sentence-transformers

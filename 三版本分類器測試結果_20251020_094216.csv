@@ -1,0 +1,11 @@
+﻿測試案例,正確答案,V1預測,V2預測,V3預測,V1正確,V2正確,V3正確
+防火牆設備,實體,實體,實體,實體,True,True,True
+MySQL資料庫,軟體,軟體,軟體,軟體,True,True,True
+作業文件,資料,資料,資料,資料,True,True,True
+系統管理員,人員,軟體,人員,人員,False,True,True
+網路服務,服務,服務,服務,服務,True,True,True
+儲存設備,實體,實體,實體,實體,True,True,True
+Oracle系統,軟體,軟體,軟體,軟體,True,True,True
+電子紀錄,資料,資料,資料,資料,True,True,True
+外部人員,人員,人員,人員,人員,True,True,True
+雲端服務,服務,服務,服務,服務,True,True,True
